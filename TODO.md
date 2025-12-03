@@ -12,8 +12,8 @@
     - [ ] rimuoviamo spazi inizio e/o fine?
   - **Discutere di strani aspetti di lemmatization e tokenizzazione**
 
-    - [ ] Va bene che i doppi apici (") iniziali diventino `` e quelli finali '' ?
-    - [ ] I'm diventa i 'm e non i be
+    - [X] Va bene che i doppi apici (") iniziali diventino `` e quelli finali '' ?
+    - [X] I'm diventa i 'm e non i be
 
     UPDATE: probabilmente hanno senso era solo per segnalarlo
   - **Discutere regex**
@@ -28,5 +28,3 @@
     - [ ] Come gestiamo i separatori? a volte vengono usati ___ o ::: o ---, secondo me potrebbero diventare singoli spazi
     - [ ] Come gestire l'uso di ~ ? Indica un todo da flirt
     - [ ] A volte usano +, -, _ a inizo frase per simulare una lista
-
-️
