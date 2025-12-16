@@ -1,32 +1,31 @@
-# Ordini del giorno
+# TODO
 
-## 26/11
+## Statistics on the dataset
 
-- **Task 2**
+* [ ] Plot distributions, etc.
 
-  - **Facciamo post-processing?**
+## General Cleanup
 
-    - [ ] togliamo punteggiatura inizio?
-    - [ ] compattiamo punteggiatura ripetuta?
-    - [ ] compattiamo spazi
-    - [ ] rimuoviamo spazi inizio e/o fine?
-  - **Discutere di strani aspetti di lemmatization e tokenizzazione**
+* [ ] Reduce redundancy in NLTK downloads and confirm only required resources are installed.
+* [ ] Validate whether local `nltk_data` setup is necessary or can be simplified.
 
-    - [ ] Va bene che i doppi apici (") iniziali diventino `` e quelli finali '' ?
-    - [ ] I'm diventa i 'm e non i be
+## Emoji Handling
 
-    UPDATE: probabilmente hanno senso era solo per segnalarlo
-  - **Discutere regex**
+* [ ] Optional: convert text-based emojis into textual placeholders instead of dropping them. We also would need not to remove them with regex.
 
-    - [ ] Vogliamo inserire `re.compile(r'[ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻᴬᴮᴰᴱᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾᴿᵀᵁⱽᵂ]+')` anche se appare una volta tra i tweets e recita:
-      "Are you ever at work and just look at someone and you're likeʸᵒᵘ ˡᵒᵒᵏ ˡⁱᵏᵉ ᵃ ᵇⁱᵗᶜʰ "
-    - [ ] Vogliamo considerare `re.compile(r'[↕↔→←↑↓⇒⇐⇑⇓⇔⟵⟶⟷⤴⤵]'),` anche se in realtà ci serve solo `↕` dato cche sembra impossibile eliminare l'emoji ️↕️
-    - [ ] Come consideriamo i tentativi di emoji sbagliati o emoji straniere particolari come
-      "@Ellars It's stupid Russian Federation army force, they're thinking that Chernobyl is still for us a strategic object)))"
-      **NB: cercando online ho trovato che ))) è un'emoticon russa/slava equivalente a :) o 😂**
-    - [ ] Come vogliamo considerare gli asterischi? a volte sono ad indicare dei bullets e a volte indicano una parola in bold
-    - [ ] Come gestiamo i separatori? a volte vengono usati ___ o ::: o ---, secondo me potrebbero diventare singoli spazi
-    - [ ] Come gestire l'uso di ~ ? Indica un todo da flirt
-    - [ ] A volte usano +, -, _ a inizo frase per simulare una lista
+## Regex and Pattern Design
 
-️
+* [ ] Clarify whether quotes should be filtered  in the dedicated pattern or uniformly under “non-alphanumeric.”
+* [ ] Investigate replacing the full “non-alphanumeric” regex with a more selective filter to avoid over-cleaning.
+
+## Train-Only Postprocessing
+
+Apply additional cleaning steps only to the training set:
+
+* [ ] Remove leftover noisy characters caused by naive removal rules.
+* [ ] Compress repeated punctuation into single instances.
+* [ ] Optionally detect and handle HTML tags or noisy patterns like `10%-`.
+
+## Embeddings
+
+* [ ] In the try-except case, try a more fitting strategy for missing embedding than random: interpolation.
