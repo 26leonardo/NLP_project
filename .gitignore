@@ -4,4 +4,8 @@ cardiffnlp/
 
 twitter-roberta-base-hate/
 
+pt_checkpoints/
+
+pf_checkpoints/
+
 nltk_data/
