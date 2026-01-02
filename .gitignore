@@ -2,6 +2,10 @@
 
 myDrive/
 
+drive/
+
+*.pkl
+
 cardiffnlp/
 
 twitter-roberta-base-hate/
