@@ -29,3 +29,9 @@ Apply additional cleaning steps only to the training set:
 ## Embeddings
 
 * [ ] In the try-except case, try a more fitting strategy for missing embedding than random: interpolation.
+  
+## Error analysis
+* [ ] Check the influence of the OOV tokens 
+* [ ] Change the embedding using all glove
+* [ ] Change embedding with greater embedding dimension
+* [ ] Try greater model with different dropout values and also dense layers before classification
