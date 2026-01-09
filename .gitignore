@@ -4,6 +4,8 @@ myDrive/
 
 drive/
 
+models/
+
 # *.pkl
 
 cardiffnlp/
